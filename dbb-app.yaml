@@ -1,0 +1,18 @@
+version: 1.0.0
+application:
+  name: sample-repo
+  tasks:
+    - task: Cobol
+      variables:
+        - name: defaultParms TO BE Designed with IBM
+          value: LIST,MAP
+  
+    - task: ImpactAnalysis
+      variables:
+        - name: impactQueryPatterns
+          value:
+          - languageExt: cbl
+            dependencyPatterns:
+              - "**.cpy"
+              - "**.cbl"
+  

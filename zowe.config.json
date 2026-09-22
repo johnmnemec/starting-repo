@@ -1,0 +1,82 @@
+{
+    "$schema": "./zowe.schema.json",
+    "profiles": {
+        "rse_Fyre": {
+            "type": "rse",
+            "properties": {
+                "host": "zos",
+                "port": 8195,
+                "rejectUnauthorized": false,
+                "basePath": "rseapi",
+                "protocol": "https",
+                "encoding": "IBM-1047"
+            },
+            "secure": [
+                "user",
+                "password"
+            ]
+        },
+        "H3N_system": {
+            "type": "zosmf",
+            "properties": {
+                "host": "tivlp98.pok.stglabs.ibm.com",
+                "port": 443,
+                "rejectUnauthorized": false,
+                "protocol": "https",
+                "encoding": "IBM-1047"
+            },
+            "secure": [
+                "user",
+                "password"
+            ]
+        },
+        "zOpenDebug": {
+            "type": "zOpenDebug",
+            "properties": {
+                "host": "10.3.20.201",
+                "dpsPort": 8143,
+                "dpsContextRoot": "api/v1",
+                "dpsSecured": true,
+                "rdsPort": 8001,
+                "rdsSecured": false,
+                "uuid": "c52b558f-3b8f-4efe-9cc3-edd668864082"
+            },
+            "secure": [
+                "user",
+                "password"
+            ]
+        },
+        "zTEC_RSE": {
+            "type": "rse",
+            "properties": {
+                "host": "10.3.20.201",
+                "port": 6800,
+                "basePath": "rseapi",
+                "protocol": "https",
+                "authOrder": "basic",
+                "rejectUnauthorized": false
+            },
+            "secure": [
+                "user", "password"
+            ]
+        }
+    },
+    "base": {
+        "type": "base",
+        "properties": {
+            "host": "zos",
+            "rejectUnauthorized": true
+        },
+        "secure": [
+            "user",
+            "password"
+        ]
+    },    
+    "defaults": {
+        //"rse": "rse_Fyre",
+        "rse": "zTEC_RSE",
+        "base": "base",
+        "zOpenDebug": "zOpenDebug"
+    },
+    "autoStore": true
+}

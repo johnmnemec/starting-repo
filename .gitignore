@@ -1,0 +1,6 @@
+logs/hello-world/logs/buildList.txt
+logs/hello-world/logs/BuildReport.html
+logs/hello-world/logs/BuildReport.json
+logs/hello-world/logs/HELLO.cbl-01-compile.log
+logs/hello-world/logs/HELLO.cbl-02-linkEdit.log
+logs/hello-world/logs/RuntimeReport.json
