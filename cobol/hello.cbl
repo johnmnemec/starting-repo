@@ -4,5 +4,5 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        PROCEDURE DIVISION.
-           DISPLAY 'Hello World test change again'.
+           DISPLAY 'Hello World'.
            STOP RUN.
